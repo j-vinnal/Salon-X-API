@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <UserSecretsId>aspnet-WebApp-23405A8A-79B4-42E4-8F43-0BB7D4EE91CC</UserSecretsId>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Asp.Versioning.Mvc" Version="8.1.0"/>
+        <PackageReference Include="Asp.Versioning.Mvc.ApiExplorer" Version="8.1.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.4"/>
+        <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="8.0.4"/>
+        <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.4"/>
+        <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="8.0.4"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="8.0.4"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.4"/>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.4">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.2"/>
+        <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.2"/>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\App.BLL\App.BLL.csproj"/>
+        <ProjectReference Include="..\App.DAL.EF\App.DAL.EF.csproj"/>
+        <ProjectReference Include="..\App.Resources\App.Resources.csproj"/>
+        <ProjectReference Include="..\Base.Helpers\Base.Helpers.csproj"/>
+        <ProjectReference Include="..\App.Public\App.Public.csproj"/>
+        <ProjectReference Include="..\Base.Resources\Base.Resources.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <_ContentIncludedByDefault Remove="Views\Brands\Create.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Brands\Delete.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Brands\Details.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Brands\Edit.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Brands\Index.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Providers\Create.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Providers\Delete.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Providers\Details.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Providers\Edit.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Providers\Index.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Providers\_CreateEdit.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Salons\Create.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Salons\Delete.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Salons\Details.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Salons\Edit.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Salons\Index.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\SalonServices\Create.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\SalonServices\Delete.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\SalonServices\Details.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\SalonServices\Edit.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\SalonServices\Index.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Services\Create.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Services\Delete.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Services\Details.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Services\Edit.cshtml"/>
+        <_ContentIncludedByDefault Remove="Views\Services\Index.cshtml"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="wwwroot\uploads\"/>
+    </ItemGroup>
+
+    <PropertyGroup>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+    </PropertyGroup>
+
+</Project>

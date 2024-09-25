@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>App.DTO.DAL</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\App.Domain\App.Domain.csproj"/>
+        <ProjectReference Include="..\Base.Contracts\Base.Contracts.csproj"/>
+    </ItemGroup>
+
+</Project>

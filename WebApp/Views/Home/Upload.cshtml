@@ -1,0 +1,25 @@
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model WebApp.ViewModels.FileUploadViewModel
+
+<h1>Upload image file!</h1>
+
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        @* The enctype attribute specifies how form data should be encoded when submitting it to the server. *@
+        <form method="post" asp-action="Upload" enctype="multipart/form-data">
+
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="File" class="control-label"></label>
+                <input asp-for="File" class="form-control"/>
+                <span asp-validation-for="File" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Upload" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>

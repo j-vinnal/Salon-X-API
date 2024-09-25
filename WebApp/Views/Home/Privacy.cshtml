@@ -1,0 +1,97 @@
+﻿@model WebApp.ViewModels.HomePrivacyVM
+@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+@if (Model.AppUser != null)
+{
+    <br/>
+    <h3>Refresh tokens</h3>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>
+                Current refresh token
+            </th>
+            <th>Current expiration</th>
+            <th>
+                Prev refresh token
+            </th>
+            <th>Prev expiration</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.AppUser!.AppRefreshTokens!)
+        {
+            <tr>
+                <td>
+                    @item.RefreshToken
+                </td>
+                <td>
+                    @item.ExpirationDt
+                </td>
+                <td>
+                    @item.PreviousRefreshToken
+                </td>
+                <td>
+                    @item.PreviousExpirationDt
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+    <br/>
+    <h3>User claims (db)</h3>
+
+    <table class="table">
+        <thead>
+        <tr>
+            <th>Type</th>
+            <th>Value</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.AppUserClaims!)
+        {
+            <tr>
+                <td>
+                    @item.ClaimType
+                </td>
+                <td>
+                    @item.ClaimValue
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
+
+<br/>
+<h3>Claims Principal (User)</h3>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            Claim name
+        </th>
+        <th>Claim value</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in User.Claims)
+    {
+        <tr>
+            <td>
+                @item.Type
+            </td>
+            <td>
+                @item.Value
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>

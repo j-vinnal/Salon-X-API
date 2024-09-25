@@ -1,0 +1,59 @@
+@using App.Domain.Enums
+@model WebApp.Areas.Admin.ViewModels.WorkingHourCreateEditViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>WorkingHour</h4>
+<hr/>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="WorkingHour.DayOfWeek" class="control-label"></label>
+                <select asp-for="WorkingHour.DayOfWeek" class="form-control">
+                    @foreach (var day in Enum.GetValues(typeof(EDayOfWeek)))
+                    {
+                        <option value="@day">@day</option>
+                    }
+                </select>
+                <span asp-validation-for="WorkingHour.DayOfWeek" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkingHour.StartTime" class="control-label"></label>
+                <input asp-for="WorkingHour.StartTime" class="form-control" type="time"/>
+                <span asp-validation-for="WorkingHour.StartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkingHour.EndTime" class="control-label"></label>
+                <input asp-for="WorkingHour.EndTime" class="form-control" type="time"/>
+                <span asp-validation-for="WorkingHour.EndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="WorkingHour.IsActive"/>
+                    @Html.DisplayNameFor(model => model.WorkingHour.IsActive)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkingHour.CompanyId" class="control-label"></label>
+                <select asp-for="WorkingHour.CompanyId" class="form-control" asp-items="ViewBag.CompanyId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+}

@@ -1,0 +1,34 @@
+[
+    {
+        "ServiceName": "Men's Haircut",
+        "Description": "Quick men's haircut",
+        "Price": 25.00,
+        "Duration": 30,
+        "Status": 0,
+        "CompanyId": "5ac3a4e0-2c97-444f-88f8-a1fe7cbdf94b"
+    },
+    {
+        "ServiceName": "Women's Haircut",
+        "Description": "Basic women's haircut",
+        "Price": 30.00,
+        "Duration": 45,
+        "Status": 0,
+        "CompanyId": "5ac3a4e0-2c97-444f-88f8-a1fe7cbdf94b"
+    },
+    {
+        "ServiceName": "Beard Trim",
+        "Description": "Beard shaping and trim",
+        "Price": 15.00,
+        "Duration": 20,
+        "Status": 0,
+        "CompanyId": "5ac3a4e0-2c97-444f-88f8-a1fe7cbdf94b"
+    },
+    {
+        "ServiceName": "Hair Styling",
+        "Description": "Special hair styling for events",
+        "Price": 40.00,
+        "Duration": 60,
+        "Status": 0,
+        "CompanyId": "5ac3a4e0-2c97-444f-88f8-a1fe7cbdf94b"
+    }
+]
