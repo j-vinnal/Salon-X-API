@@ -2,7 +2,7 @@
 
 This is a .NET backend project for the SalonX beauty services management and booking platform.
 
-## Getting Started 
+## Getting Started
 
 To get started with the project, follow these steps:
 
@@ -24,7 +24,7 @@ To get started with the project, follow these steps:
 
 ## Project Overview
 
-SalonX is a beauty services management and booking platform that uses .NET for the backend and Next.js for the frontend. The public view is hosted on Azure at [https://salonx-nextjs.azurewebsites.net/signin](https://salonx-nextjs.azurewebsites.net/signin). The backend Swagger documentation is available at [https://salonx-api.azurewebsites.net/swagger/index.html](https://salonx-api.azurewebsites.net/swagger/index.html).
+SalonX is a beauty services management and booking platform that uses .NET for the backend and Next.js for the frontend. The live app is hosted on Azure at [https://salonx-nextjs.azurewebsites.net/signin](https://salonx-nextjs.azurewebsites.net/signin). The backend Swagger documentation is available at [https://salonx-api.azurewebsites.net/swagger/index.html](https://salonx-api.azurewebsites.net/swagger/index.html).
 
 The frontend GitHub project is available at [https://github.com/j-vinnal/Salon-X/](https://github.com/j-vinnal/Salon-X/).
 
@@ -42,12 +42,12 @@ The backend uses Clean Architecture. Check the [Codebase](#directory-structure) 
 ### Directory Structure
 
 - **`/App`** - Application-specific code.
-  - **`/BLL`** - Business Logic Layer.
-  - **`/Contracts`** - Interfaces and contracts.
-  - **`/DAL`** - Data Access Layer.
-  - **`/Domain`** - Domain models.
-  - **`/DTO`** - Data Transfer Objects.
-  - **`/Public`** - Public-facing code.
+    - **`/BLL`** - Business Logic Layer.
+    - **`/Contracts`** - Interfaces and contracts.
+    - **`/DAL`** - Data Access Layer.
+    - **`/Domain`** - Domain models.
+    - **`/DTO`** - Data Transfer Objects.
+    - **`/Public`** - Public-facing code.
 - **`/Base`** - Base classes and shared code.
 - **`/WebApp`** - The main web application project.
 
