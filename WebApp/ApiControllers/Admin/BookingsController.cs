@@ -123,6 +123,10 @@ public class BookingsController : ApiControllerBase
             var existingEntity = await _bll.BookingService.FindAsync(booking.Id, appUserId);
             if (existingEntity == null)
                 return GenerateErrorResponse(HttpStatusCode.BadRequest, "No hacking (bad user id)!");
+            
+            //TODO: Should be better solution
+            // Convert the booking date to UTC, because docker
+            booking.BookingDate = DateTime.SpecifyKind(booking.BookingDate, DateTimeKind.Utc);
 
             var entityBll = _mapper.Map(booking)!;
             _bll.BookingService.Update(entityBll);
