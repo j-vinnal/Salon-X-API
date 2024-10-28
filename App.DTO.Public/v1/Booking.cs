@@ -1,6 +1,6 @@
 
 using App.Domain.Enums;
-using Base.Contacts;
+using Base.Contracts;
 
 namespace App.DTO.Public.v1;
 

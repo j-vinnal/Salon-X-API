@@ -1,5 +1,6 @@
 ﻿using App.Domain.Enums;
-using Base.Contacts;
+using Base.Contracts;
+using Base.Contracts;
 
 namespace App.DTO.BLL;
 

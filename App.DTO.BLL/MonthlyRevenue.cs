@@ -1,6 +1,6 @@
 
 
-using Base.Contacts;
+using Base.Contracts;
 
 namespace App.DTO.BLL;
 

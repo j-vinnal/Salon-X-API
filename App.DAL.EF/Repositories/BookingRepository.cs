@@ -1,6 +1,7 @@
 using App.Contracts.DAL.Repositories;
 using App.DTO.DAL;
 using Base.Contacts;
+using Base.Contracts;
 using Base.DAL.EF;
 using Microsoft.EntityFrameworkCore;
 using Booking = App.Domain.Booking;

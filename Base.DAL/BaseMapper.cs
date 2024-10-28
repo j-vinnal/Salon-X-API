@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using Base.Contacts;
+using Base.Contracts;
 
 namespace Base.DAL;
 

@@ -1,4 +1,5 @@
-﻿using Base.Contacts;
+﻿using Base.Contracts;
+using Base.Contracts;
 using Base.Contracts.Domain;
 using Base.Domain;
 

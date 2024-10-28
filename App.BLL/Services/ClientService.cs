@@ -4,6 +4,7 @@ using App.Contracts.DAL.Repositories;
 using App.DTO.BLL;
 using Base.BLL;
 using Base.Contacts;
+using Base.Contracts;
 
 namespace App.BLL.Services;
 

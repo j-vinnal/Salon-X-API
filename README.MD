@@ -69,7 +69,7 @@ docker run -d -p 8000:80 salonx-backend:latest
 
 ### Build to Docker Hub
 
-Create the image:
+Create the image: .
 
 ```bash
 docker buildx build --progress=plain -t salonx-backend:latest .

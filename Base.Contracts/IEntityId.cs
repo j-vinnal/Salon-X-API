@@ -1,4 +1,4 @@
-﻿namespace Base.Contacts;
+﻿namespace Base.Contracts;
 
 public interface IEntityId : IEntityId<Guid>
 {

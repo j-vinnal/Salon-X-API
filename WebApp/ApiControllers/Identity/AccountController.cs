@@ -64,6 +64,7 @@ public class AccountController : ApiControllerBase
     /// <returns>JWTResponse with jwt and refresh token.</returns>
     [HttpPost]
     [Produces(MediaTypeNames.Application.Json)]
+    [Consumes(MediaTypeNames.Application.Json)]
     [ProducesResponseType(typeof(JWTResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(typeof(RestApiErrorResponse), StatusCodes.Status400BadRequest)]
 
@@ -72,11 +73,12 @@ public class AccountController : ApiControllerBase
         [FromQuery] int expiresInSeconds)
     {
         if (expiresInSeconds <= 0) expiresInSeconds = int.MaxValue;
+        expiresInSeconds = expiresInSeconds < _configuration.GetValue<int>("JWT:expiresInSeconds")
+            ? expiresInSeconds
+            : _configuration.GetValue<int>("JWT:expiresInSeconds");
 
         // is user already registered?
         var appUser = await _userManager.FindByEmailAsync(registrationData.Email);
-
-
         if (appUser != null)
         {
             _logger.LogWarning("User with email {} is already registered", registrationData.Email);
@@ -161,6 +163,9 @@ public class AccountController : ApiControllerBase
     public async Task<ActionResult<JWTResponse>> LogIn([FromBody] Login loginData, [FromQuery] int expiresInSeconds)
     {
         if (expiresInSeconds <= 0) expiresInSeconds = int.MaxValue;
+        expiresInSeconds = expiresInSeconds < _configuration.GetValue<int>("JWT:expiresInSeconds")
+            ? expiresInSeconds
+            : _configuration.GetValue<int>("JWT:expiresInSeconds");
 
         // Verify email address
         var appUser = await _userManager.FindByEmailAsync(loginData.Email);
@@ -174,7 +179,7 @@ public class AccountController : ApiControllerBase
                 "No account found with the provided email address");
         }
 
-        // Verify email and password
+        // Verify password
         var result = await _signInManager.CheckPasswordSignInAsync(appUser, loginData.Password, false);
         if (!result.Succeeded)
         {

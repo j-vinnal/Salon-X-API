@@ -1,4 +1,4 @@
-﻿using Base.Contacts;
+﻿using Base.Contracts;
 
 namespace Base.Contracts.DAL;
 

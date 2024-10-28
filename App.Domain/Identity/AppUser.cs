@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Base.Contacts;
+using Base.Contracts;
+using Base.Contracts;
 using Microsoft.AspNetCore.Identity;
 
 namespace App.Domain.Identity;

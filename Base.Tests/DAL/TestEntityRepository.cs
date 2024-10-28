@@ -1,4 +1,5 @@
 ﻿using Base.Contacts;
+using Base.Contracts;
 using Base.DAL.EF;
 using Base.Tests.Domain;
 

@@ -1,6 +1,7 @@
 using App.Contracts.DAL.Repositories;
 using App.Domain;
 using Base.Contacts;
+using Base.Contracts;
 using Base.DAL.EF;
 using Microsoft.EntityFrameworkCore;
 

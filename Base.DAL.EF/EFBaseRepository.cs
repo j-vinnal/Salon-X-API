@@ -1,4 +1,6 @@
 ﻿using Base.Contacts;
+using Base.Contracts;
+using Base.Contracts;
 using Base.Contracts.DAL;
 using Base.Contracts.Domain;
 using Microsoft.EntityFrameworkCore;

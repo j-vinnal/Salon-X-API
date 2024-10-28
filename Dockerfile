@@ -72,6 +72,7 @@ COPY Tests/. ./Tests/
 COPY WebApp/. ./WebApp/
 
 # Copy seed data
+COPY App.DAL.EF/Seeding/SeedData/ /src/App.DAL.EF/Seeding/SeedData/
 COPY App.DAL.EF/Seeding/SeedData/ /app/App.DAL.EF/Seeding/SeedData/
 
 # Set IsTestEnvironment to true and run tests
@@ -90,7 +91,7 @@ WORKDIR /app
 EXPOSE 80
 
 COPY --from=build /src/WebApp/out ./
-COPY --from=build /src/App.DAL.EF/Seeding/SeedData/ ./App.DAL.EF/Seeding/SeedData/
+
 ENV TZ=Etc/UTC
 
 ENTRYPOINT ["dotnet", "WebApp.dll"]

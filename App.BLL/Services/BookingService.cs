@@ -4,6 +4,7 @@ using App.Contracts.DAL.Repositories;
 using App.DTO.BLL;
 using Base.BLL;
 using Base.Contacts;
+using Base.Contracts;
 using MonthlyRevenue = App.DTO.DAL.MonthlyRevenue;
 
 namespace App.BLL.Services;

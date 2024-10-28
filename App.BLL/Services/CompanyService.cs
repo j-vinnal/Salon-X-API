@@ -4,6 +4,7 @@ using App.Contracts.DAL.Repositories;
 using App.DTO.BLL;
 using Base.BLL;
 using Base.Contacts;
+using Base.Contracts;
 using CompanyWithServices = App.DTO.DAL.CompanyWithServices;
 
 namespace App.BLL.Services;

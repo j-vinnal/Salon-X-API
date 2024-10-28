@@ -17,7 +17,7 @@ public class AppBLL : BaseBLL<IAppUOW>, IAppBLL
     private IServiceService? _serviceService;
     private IWorkingHourService? _workingHourService;
 
-    protected new IAppUOW Uow;
+    private new IAppUOW Uow;
 
     public AppBLL(IAppUOW uow, IMapper mapper) : base(uow)
     {

@@ -1,5 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using Base.Contacts;
+using Base.Contracts;
 using Attribute = Base.Resources.Attribute;
 
 namespace App.DTO.Public.v1;
